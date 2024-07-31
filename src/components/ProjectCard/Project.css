@@ -1,0 +1,260 @@
+.project-container {
+    margin-top: 150px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    
+}
+
+h2 {
+    font-style: normal;
+    font-size: 30px;
+}
+
+
+.project-content {
+    color: #fff;
+    display: flex;
+    width: 400px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 80px;
+}
+
+
+
+.project-content::after,
+.project-content::before {
+    content: " ";
+    width: 28rem;
+    height: 28rem;
+    border-radius: 28.125rem;
+    background-color: #1e25ac;
+    position: absolute;
+    z-index: -1;
+    filter: blur(225px);
+
+}
+
+.project-content::after {
+    top: -3rem;
+    left: -5rem;
+}
+
+.project-content::before {
+    background: #6791fb ;
+    bottom: 0rem;
+    right: 0rem;
+}
+
+
+.projects {
+    width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color   : #fff;
+    padding: 11px;
+    border: 1.5px solid #6791fb;
+    border-radius: 0.65rem;
+    transition: all 0.5s ease;
+    background: #0000003b;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.projects:hover {
+    transform: translateY(-0.8rem);
+    transition: .5s;
+}
+
+.projects img{
+    width: 280px;
+    height: auto;
+    border-radius: 10px;
+} 
+.img-badges {
+    width: 10px;
+    border-radius: 10px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    
+}
+
+.link {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 13px;
+}
+
+.projects a {
+    text-decoration: none;
+    color: #fff;
+    margin: 5px;
+    background: linear-gradient(90deg, #6791fb 0%, #1e25ac 100%);
+    border-radius: 10px;
+    padding: 5px;
+
+}
+@media (max-width: 1025px) {
+    .project-container {
+        margin-top: 100px;
+    }
+
+    .project-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-container {
+        margin-top: 80px;
+    }
+
+    .project-content {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .projects {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-container {
+        margin-top: 60px;
+    }
+
+    .project-content {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .project-content::after,
+    .project-content::before {
+        width: 20rem;
+        height: 20rem;
+        filter: blur(150px);
+    }
+
+    .project-content::after {
+        top: -2rem;
+        left: -3rem;
+    }
+
+    .project-content::before {
+        bottom: 0;
+        right: 0;
+    }
+
+    .projects {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .projects img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .project-container {
+        margin-top: 30px;
+    }
+
+    .project-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .project-content::after,
+    .project-content::before {
+        width: 15rem;
+        height: 15rem;
+        filter: blur(100px);
+    }
+
+    .project-content::after {
+        top: -1rem;
+        left: -2rem;
+    }
+
+    .project-content::before {
+        bottom: 0;
+        right: 0;
+    }
+
+    .projects {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .projects img {
+        width: 100%;
+    }
+
+    .img-badges {
+        width: 80px;
+    }
+}
+
+@media (max-width: 320px) {
+    .project-container {
+        margin-top: 30px;
+    }
+
+    .project-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .project-content::after,
+    .project-content::before {
+        width: 15rem;
+        height: 15rem;
+        filter: blur(100px);
+    }
+
+    .project-content::after {
+        top: -1rem;
+        left: -2rem;
+    }
+
+    .project-content::before {
+        bottom: 0;
+        right: 0;
+    }
+
+    .projects {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .projects img {
+        width: 100%;
+    }
+
+    .img-badges {
+        width: 80px;
+    }
+}
+
+
