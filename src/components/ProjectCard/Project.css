@@ -173,6 +173,48 @@ h2 {
     }
 }
 
+@media (max-width: 425px) {
+    .project-container {
+        margin-top: 30px;
+    }
+
+    .project-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .project-content::after,
+    .project-content::before {
+        width: 15rem;
+        height: 15rem;
+        filter: blur(100px);
+    }
+
+    .project-content::after {
+        top: -1rem;
+        left: -2rem;
+    }
+
+    .project-content::before {
+        bottom: 0;
+        right: 0;
+    }
+
+    .projects {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .projects img {
+        width: 100%;
+    }
+
+    .img-badges {
+        width: 80px;
+    }
+}
+
 @media (max-width: 375px) {
     .project-container {
         margin-top: 30px;

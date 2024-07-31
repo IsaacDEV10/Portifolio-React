@@ -310,6 +310,56 @@ h2 {
     }
 }
 
+@media (max-width: 425px) {
+    .skill-container {
+        margin-top: 30px;
+    }
+
+    .skill-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .skill-content::after,
+    .skill-content::before {
+        width: 15rem;
+        height: 15rem;
+        filter: blur(100px);
+    }
+
+    .skill-content::after {
+        top: -1rem;
+        left: -2rem;
+    }
+
+    .skill-content::before {
+        bottom: 0;
+        right: 0;
+    }
+
+    .skill {
+        width: 100%;
+        margin: 10px 0;
+        margin-right: 250px;
+        padding: 10px;
+    }
+
+    .skill li {
+        width: 100%;
+    }
+
+    .bar {
+        height: 10px;
+    }
+
+    .bar span {
+        height: 10px;
+    }
+}
+
+
+
+
 @media (max-width: 375px) {
     .skill-container {
         margin-top: 30px;
