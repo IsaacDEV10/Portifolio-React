@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/Portifolio-React/static/css/main.661ba567.css",
-    "main.js": "/Portifolio-React/static/js/main.fc99e2de.js",
+    "main.js": "/Portifolio-React/static/js/main.edfb3437.js",
     "static/media/private-idiomas.png": "/Portifolio-React/static/media/private-idiomas.bb28a4d645956b45f14f.png",
     "static/media/portifolio.png": "/Portifolio-React/static/media/portifolio.86ff0e35343fb4a2b075.png",
     "static/media/isaac2.png": "/Portifolio-React/static/media/isaac2.357eb6fef68574c77a73.png",
-    "static/media/cadastro.png": "/Portifolio-React/static/media/cadastro.ceb78b230c4c88c25326.png",
     "static/media/isaac.png": "/Portifolio-React/static/media/isaac.7de126508ef7a445c147.png",
     "static/media/tailwind.png": "/Portifolio-React/static/media/tailwind.248f03cadebceaf7d508.png",
     "static/media/convert-money.png": "/Portifolio-React/static/media/convert-money.eb30c1ac60e8addf8dbe.png",
@@ -14,15 +13,16 @@
     "static/media/curriculo.png": "/Portifolio-React/static/media/curriculo.4a31dde1a9427c7b8c49.png",
     "static/media/node.png": "/Portifolio-React/static/media/node.9fea1c7da2bd42ab93bf.png",
     "static/media/react.png": "/Portifolio-React/static/media/react.3b5049ea7908e9da3ba0.png",
+    "static/media/tradutor.png": "/Portifolio-React/static/media/tradutor.fa3b0acdcbdc38aa743c.png",
     "static/media/css-3.png": "/Portifolio-React/static/media/css-3.463e319bad8e0edf1ef7.png",
     "static/media/linkedin.png": "/Portifolio-React/static/media/linkedin.783183c5ea8c1c90e4ec.png",
     "static/media/js.png": "/Portifolio-React/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/Portifolio-React/index.html",
     "main.661ba567.css.map": "/Portifolio-React/static/css/main.661ba567.css.map",
-    "main.fc99e2de.js.map": "/Portifolio-React/static/js/main.fc99e2de.js.map"
+    "main.edfb3437.js.map": "/Portifolio-React/static/js/main.edfb3437.js.map"
   },
   "entrypoints": [
     "static/css/main.661ba567.css",
-    "static/js/main.fc99e2de.js"
+    "static/js/main.edfb3437.js"
   ]
 }
