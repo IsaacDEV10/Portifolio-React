@@ -2,7 +2,7 @@ import React from "react";
 import './Project.css';
 import Private from '../../assets/private-idiomas.png'
 import Money from '../../assets/convert-money.png'
-import Cadastro from '../../assets/cadastro.png'
+import Tradutor from '../../assets/tradutor.png'
 import Portifolio from '../../assets/portifolio.png'
 
 const Project = () => {
@@ -53,16 +53,16 @@ const Project = () => {
             </div>
           </div>
           <div className="projects">
-            <img src={Cadastro} alt="" className="img-assets" />
-            <h3>Cadastro de Usuários</h3>
-            <p>Projeto tela inicial de cadastro feito com NodeJS e React</p>
+            <img src={Tradutor} alt="" className="img-assets" />
+            <h3>Tradutor Dev</h3>
+            <p>Projeto feito com React, Tailwind e Api MyMemory
+            </p>
             <div className="img-badges">
             <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt=""/>
-            <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="" />
-            <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="" />
+            <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="" />
             </div>
             <div className="link">
-                <a href="*" target="blank">Deploy</a><a href="https://github.com/IsaacDEV10/Cadastro-Usuarios" target="blank">Sources</a>
+                <a href="https://isaacdev10.github.io/Tradutor/" target="blank">Deploy</a><a href="https://github.com/IsaacDEV10/Tradutor" target="blank">Sources</a>
             </div>
           </div>
         </div>
