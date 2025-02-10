@@ -28,7 +28,7 @@ const Project = () => {
           <div className="projects">
             <img src={Money} alt="" className="img-assets" />
             <h3>Conversor de Moedas</h3>
-            <p>Converso de moedas inteligente<br />feito para conversão de dinheiro.</p>
+            <p>Conversor de moedas inteligente<br />feito para conversão de dinheiro.</p>
             <div className="img-badges">
             <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt=""/>
                     <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt=""/>
@@ -62,7 +62,7 @@ const Project = () => {
             <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="" />
             </div>
             <div className="link">
-                <a href="https://isaacdev10.github.io/Private-Idiomas/" target="blank">Deploy</a><a href="https://github.com/IsaacDEV10/Cadastro-Usuarios" target="blank">Sources</a>
+                <a href="*" target="blank">Deploy</a><a href="https://github.com/IsaacDEV10/Cadastro-Usuarios" target="blank">Sources</a>
             </div>
           </div>
         </div>

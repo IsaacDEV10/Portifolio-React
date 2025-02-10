@@ -5,7 +5,7 @@ import react from '../../assets/react.png'
 import js from '../../assets/js.png';
 import css from '../../assets/css-3.png';
 import html from '../../assets/html-5.png'
-import mongo from '../../assets/mongo.png'
+import tailwind from '../../assets/tailwind.png'
 import node from '../../assets/node.png'
 
 const Hero = () => {
@@ -35,7 +35,7 @@ const Hero = () => {
             <img src={html} alt="" />
           </div>
           <div className="tech-icon">
-            <img src={mongo} alt="" />
+            <img src={tailwind} alt="" />
           </div>
           <div className="tech-icon">
             <img src={node} alt="" />
