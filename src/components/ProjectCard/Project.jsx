@@ -6,6 +6,7 @@ import Tradutor from '../../assets/tradutor.png'
 import Portifolio from '../../assets/portifolio.png'
 import DevBurger from '../../assets/devburger.png'
 import Pharm from '../../assets/pharm.png'
+import PetDev from '../../assets/petdev.png'
 
 
 const Project = () => {
@@ -102,6 +103,19 @@ const Project = () => {
               <div className="link">
                 <a href="https://isaacdev10.github.io/pharm-info/" target="blank">Deploy</a>
                 <a href="https://github.com/IsaacDEV10/pharm-info" target="blank">Sources</a>
+              </div>
+            </div> 
+            <div className="projects">
+              <img src={PetDev} alt="" className="img-assets" />
+              <h3>PetDev</h3>
+              <p>Landing page de um petshop feita com Next,Tailwind e TypeScript.</p>
+              <div className="img-badges">
+                <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="" />
+                <img src="https://img.shields.io/badge/NEXT.JS-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="" />
+              </div>
+              <div className="link">
+                <a href="https://petdev-pp5dzhjfs-isaacdev10s-projects.vercel.app" target="blank">Deploy</a>
+                <a href="https://github.com/IsaacDEV10/Petdev" target="blank">Sources</a>
               </div>
             </div> 
           </div>

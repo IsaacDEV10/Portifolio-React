@@ -3,8 +3,8 @@ import "./Hero.css";
 import heroImage from "../../assets/isaac.png";
 import react from '../../assets/react.png'
 import js from '../../assets/js.png';
-import css from '../../assets/css-3.png';
-import html from '../../assets/html-5.png'
+import Docker from '../../assets/docker.png';
+import Next from '../../assets/nextjs.png'
 import tailwind from '../../assets/tailwind.png'
 import node from '../../assets/node.png'
 
@@ -29,10 +29,10 @@ const Hero = () => {
             <img src={js} alt="JavaScript" />
           </div>
           <div className="tech-icon">
-            <img src={css} alt="" />
+            <img src={Docker} alt="" />
           </div>
           <div className="tech-icon">
-            <img src={html} alt="" />
+            <img src={Next} alt="" />
           </div>
           <div className="tech-icon">
             <img src={tailwind} alt="" />
