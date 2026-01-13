@@ -7,7 +7,6 @@ import Portifolio from '../../assets/portifolio.png'
 import DevBurger from '../../assets/devburger.png'
 import Pharm from '../../assets/pharm.png'
 import PetDev from '../../assets/petdev.png'
-import EvoTech from '../../assets/evotech.png'
 
 
 const Project = () => {
@@ -117,20 +116,6 @@ const Project = () => {
               <div className="link">
                 <a href="https://petdev-pp5dzhjfs-isaacdev10s-projects.vercel.app" target="blank">Deploy</a>
                 <a href="https://github.com/IsaacDEV10/Petdev" target="blank">Sources</a>
-              </div>
-            </div> 
-            <div className="projects">
-              <img src={EvoTech} alt="" className="img-assets" />
-              <h3>EvoTech</h3>
-              <p>Landing page de uma empresa de tecnologia feita com React e CSS.</p>
-              <div className="img-badges">
-               <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="" />
-                <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="" />
-                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="" />
-              </div>
-              <div className="link">
-                <a href="https://isaacdev10.github.io/EvoTech/" target="blank">Deploy</a>
-                <a href="https://github.com/IsaacDEV10/EvoTech" target="blank">Sources</a>
               </div>
             </div> 
           </div>
