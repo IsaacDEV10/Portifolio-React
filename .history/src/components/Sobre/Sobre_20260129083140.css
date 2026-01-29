@@ -4,6 +4,8 @@
 .sobre-section {
     position: relative;
     padding: 120px 5%;
+    overflow: hidden;
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }

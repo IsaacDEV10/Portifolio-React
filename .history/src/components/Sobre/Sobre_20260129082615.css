@@ -1,51 +1,52 @@
-/* Sobre.css - Versão Final e Integrada */
+/* Sobre.css */
 
-/* --- SEÇÃO PRINCIPAL --- */
 .sobre-section {
     position: relative;
-    padding: 120px 5%;
-    border: none !important;
-    box-shadow: none !important;
+    padding: 100px 5%;
+    overflow: hidden;
+    /* Garante que o fundo seja o mesmo do resto do site */
+    background: transparent !important; 
 }
 
-
+/* --- BLOBS DE LUZ (Ajustados para serem "Ambient Light") --- */
 .sobre-section::after,
 .sobre-section::before {
     content: "";
     position: absolute;
-    width: 40rem; 
-    height: 40rem;
+    width: 30rem; /* Aumentei um pouco para espalhar mais */
+    height: 30rem;
     border-radius: 50%;
     z-index: -1;
-    filter: blur(250px); 
-    opacity: 0.06; 
+    /* Aumentei o blur para 180px para virar uma névoa suave */
+    filter: blur(180px); 
+    /* Opacidade baixa para não brigar com o texto */
+    opacity: 0.12; 
 }
 
 .sobre-section::after {
-    background-color: #1e25ac; /* Azul escuro */
+    background-color: #1e25ac;
     bottom: -10%;
     left: -10%;
 }
 
 .sobre-section::before {
-    background-color: #6791fb; /* Azul claro */
+    background-color: #6791fb;
     top: -10%;
     right: -10%;
 }
 
-/* --- GRID DO CONTEÚDO --- */
 .sobre-container {
     display: grid;
-    grid-template-columns: 1fr 1.2fr; /* Coluna da foto menor, texto maior */
-    gap: 80px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    z-index: 5; /* Garante que fique acima das luzes */
+    z-index: 5;
 }
 
-/* --- ÁREA DA FOTO (Sem caixas, apenas a foto) --- */
+/* --- MOLDURA DA FOTO (Estilo "Glass" Sutil) --- */
 .sobre-img-wrapper {
     display: flex;
     justify-content: center;
@@ -56,33 +57,28 @@
     position: relative;
     width: 320px;
     height: auto;
-    border-radius: 20px;
+    border-radius: 24px; /* Arredondamento um pouco maior */
+    padding: 0; /* Removi o padding para a foto ocupar tudo se quiser, ou mantenha pequeno */
     
-    /* REMOVIDO: Qualquer cor de fundo */
+    /* MUDANÇA PRINCIPAL: Borda transparente e sombra suave em vez de linha sólida */
     background: transparent;
+    border: 1px solid rgba(103, 145, 251, 0.3); /* Borda fina e transparente */
+    box-shadow: 0 0 40px rgba(103, 145, 251, 0.1); /* Brilho difuso atrás */
     
-    /* Borda muito fina e transparente */
-    border: 1px solid rgba(103, 145, 251, 0.2);
-    
-    /* Sombra suave apenas atrás da foto */
-    box-shadow: 0 0 50px rgba(103, 145, 251, 0.05);
-    
-    transition: transform 0.4s ease;
+    transition: all 0.4s ease;
 }
 
 .img-border:hover {
-    transform: scale(1.02);
-    border-color: rgba(103, 145, 251, 0.5);
-    box-shadow: 0 0 60px rgba(103, 145, 251, 0.15);
+    transform: translateY(-5px);
+    border-color: rgba(103, 145, 251, 0.8); /* Fica mais visível no hover */
+    box-shadow: 0 10px 50px rgba(103, 145, 251, 0.25);
 }
 
 .img-border img {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 20px;
-    /* Garante que a imagem não tenha fundo branco se for PNG */
-    background: transparent; 
+    border-radius: 22px; /* Segue o arredondamento da borda */
 }
 
 /* --- TEXTOS --- */
@@ -93,40 +89,38 @@
 
 .subtitle {
     color: #6791fb;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     display: block;
     margin-bottom: 15px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .sobre-content h2 {
     font-size: 3rem;
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .highlight {
-    background: linear-gradient(90deg, #6791fb 0%, #ffffff 100%);
+    background: linear-gradient(90deg, #6791fb 0%, #a5c0ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .sobre-content p {
     font-size: 1.05rem;
-    /* Cinza levemente azulado para combinar com o tema */
-    color: #b8c1ec; 
+    color: #c4c4c4; /* Cinza levemente mais escuro para contraste */
     line-height: 1.8;
     margin-bottom: 20px;
-    font-weight: 300;
 }
 
-/* --- BOTÕES E ÍCONES --- */
+/* --- BOTÕES E REDES SOCIAIS --- */
 .sobre-actions {
-    margin-top: 40px;
+    margin-top: 35px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -144,9 +138,8 @@
     justify-content: center;
     width: 45px;
     height: 45px;
-    /* Fundo invisível */
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.03); /* Fundo quase invisível */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     color: #ccc;
     font-size: 1.2rem;
@@ -158,14 +151,14 @@
     color: #fff;
     border-color: #6791fb;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(103, 145, 251, 0.4);
+    box-shadow: 0 5px 15px rgba(103, 145, 251, 0.3);
 }
 
 .btn-download {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 12px 30px;
+    padding: 12px 28px;
     background: transparent;
     border: 1px solid #6791fb;
     color: #fff;
@@ -173,6 +166,7 @@
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 0.95rem;
 }
 
 .btn-download:hover {
@@ -181,14 +175,10 @@
     transform: translateY(-2px);
 }
 
-/* --- RESPONSIVIDADE (MOBILE) --- */
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 968px) {
-    .sobre-section {
-        padding: 60px 5%;
-    }
-
     .sobre-container {
-        grid-template-columns: 1fr; /* Uma coluna só */
+        grid-template-columns: 1fr;
         text-align: center;
         gap: 50px;
     }
@@ -198,18 +188,14 @@
     }
 
     .img-border {
-        width: 260px; /* Foto menor no celular */
+        width: 280px;
         margin: 0 auto;
     }
 
     .sobre-content h2 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
     
-    .sobre-content p {
-        font-size: 0.95rem;
-    }
-
     .sobre-actions {
         justify-content: center;
     }

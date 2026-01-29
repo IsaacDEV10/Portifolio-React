@@ -4,9 +4,9 @@ import "./Hero.css";
 // IMPORTANTE: Verifique se este caminho está certo para sua foto
 import heroImage from "../../assets/isaac.png";
 
-// Importando ícones
-import { FaReact, FaNodeJs, FaGithub, FaDocker } from 'react-icons/fa';
-import { SiJavascript, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
+// Importando ícones da biblioteca react-icons
+import { FaReact, FaNodeJs, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { SiJavascript, SiNextdotjs } from 'react-icons/si';
 
 const Hero = () => {
   return (
@@ -26,6 +26,7 @@ const Hero = () => {
 
         <div className="hero-buttons">
           <a href="#work" className="btn-primary">Ver Projetos</a>
+          {/* Adicionei o link do Github como exemplo também */}
           <a href="https://github.com/IsaacDEV10" target="_blank" rel="noreferrer" className="btn-secondary">
             <FaGithub /> GitHub
           </a>
@@ -38,38 +39,19 @@ const Hero = () => {
            <img src={heroImage} alt="Isaac Luiz" className="main-photo" />
         </div>
 
-        {/* Ícones Flutuantes (Agora são 6 para fechar o círculo) */}
-        
-        {/* Topo Esquerda */}
+        {/* Ícones Flutuantes */}
         <div className="floating-icon icon-react">
           <FaReact size={30} color="#61DAFB"/>
         </div>
-        
-        {/* Topo Direita */}
         <div className="floating-icon icon-node">
           <FaNodeJs size={30} color="#339933"/>
         </div>
-        
-        {/* Meio Esquerda */}
         <div className="floating-icon icon-js">
           <SiJavascript size={25} color="#F7DF1E"/>
         </div>
-        
-        {/* Meio Direita */}
         <div className="floating-icon icon-next">
           <SiNextdotjs size={25} color="#fff"/>
         </div>
-
-        {/* Baixo Esquerda (Novo) */}
-        <div className="floating-icon icon-docker">
-          <FaDocker size={30} color="#2496ED"/>
-        </div>
-
-        {/* Baixo Direita (Novo) */}
-        <div className="floating-icon icon-tailwind">
-          <SiTailwindcss size={30} color="#06B6D4"/>
-        </div>
-
       </div>
 
     </section>

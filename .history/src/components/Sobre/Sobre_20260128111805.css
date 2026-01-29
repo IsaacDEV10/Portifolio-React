@@ -1,0 +1,198 @@
+/* Sobre.css - Versão Clean e Corrigida */
+
+.sobre-section {
+    position: relative;
+    padding: 100px 5%;
+    overflow: hidden;
+    /* Garante fundo transparente para pegar o preto do body */
+    background: transparent !important; 
+}
+
+/* --- BLOBS DE LUZ (Mais suaves agora) --- */
+.sobre-section::after,
+.sobre-section::before {
+    content: "";
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(120px);
+    /* MUDANÇA: Reduzi de 0.4 para 0.15 para ficar bem sutil */
+    opacity: 0.15; 
+}
+
+.sobre-section::after {
+    background-color: #1e25ac;
+    bottom: 0;
+    left: -10%;
+}
+
+.sobre-section::before {
+    background-color: #6791fb;
+    top: 0;
+    right: -10%;
+}
+
+.sobre-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Adicionei z-index para garantir que o texto fique acima de tudo */
+    position: relative;
+    z-index: 5;
+}
+
+/* --- MOLDURA DA FOTO (Sem fundo sólido) --- */
+.sobre-img-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.img-border {
+    position: relative;
+    width: 320px;
+    height: auto;
+    border-radius: 20px;
+    padding: 10px; /* Espaço entre a foto e a borda */
+    
+    /* MUDANÇA: Tirei o fundo gradiente e deixei só a borda fina */
+    background: transparent;
+    border: 2px solid #6791fb; 
+    
+    box-shadow: 0 0 20px rgba(103, 145, 251, 0.1); /* Sombra leve */
+    transition: transform 0.3s ease;
+}
+
+.img-border:hover {
+    transform: scale(1.02);
+    border-color: #fff; /* Fica branco ao passar o mouse */
+    box-shadow: 0 0 30px rgba(103, 145, 251, 0.4);
+}
+
+.img-border img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* --- TEXTOS --- */
+.sobre-content {
+    color: #fff;
+    text-align: left;
+}
+
+.subtitle {
+    color: #6791fb;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sobre-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #6791fb 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sobre-content p {
+    font-size: 1.05rem;
+    color: #d1d5db;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* --- BOTÕES E REDES SOCIAIS --- */
+.sobre-actions {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #ccc;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #6791fb;
+    color: #fff;
+    transform: translateY(-3px);
+    border-color: #6791fb;
+}
+
+.btn-download {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: transparent;
+    border: 1px solid #6791fb;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: rgba(103, 145, 251, 0.15);
+    transform: translateY(-3px);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 968px) {
+    .sobre-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .sobre-img-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .img-border {
+        width: 280px;
+        margin: 0 auto;
+    }
+
+    .sobre-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .sobre-actions {
+        justify-content: center;
+    }
+}

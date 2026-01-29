@@ -1,0 +1,129 @@
+.skill-container {
+    margin-top: 100px; /* Reduzi um pouco para ficar mais harmônico */
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 0 20px; /* Garante margem em telas pequenas */
+}
+
+/* Título */
+h2#skills {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    background: linear-gradient(90deg, #6791fb 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.skill-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Faz os cards terem a mesma altura */
+    gap: 30px;
+    flex-wrap: wrap; /* Permite quebrar linha se não couber */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Efeitos de Blur de Fundo (Mantive os seus, só ajustei posicionamento) */
+.skill-content::after,
+.skill-content::before {
+    content: " ";
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(150px);
+    opacity: 0.6;
+}
+
+.skill-content::after {
+    background-color: #6791fb;
+    top: -5rem;
+    left: 10%;
+}
+
+.skill-content::before {
+    background: #1e25ac;
+    bottom: -5rem;
+    right: 10%;
+}
+
+/* O Card da Categoria */
+.skill-category {
+    flex: 1; /* Divide espaço igualmente */
+    min-width: 300px; /* Tamanho mínimo antes de quebrar linha */
+    max-width: 380px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(103, 145, 251, 0.3);
+    border-radius: 1rem;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    backdrop-filter: blur(10px); /* Efeito de vidro */
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    border-color: #6791fb;
+    box-shadow: 0 10px 30px rgba(30, 37, 172, 0.2);
+}
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #6791fb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Container das Etiquetas */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* As Etiquetas (Badges) */
+.skill-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    padding: 8px 16px;
+    border-radius: 50px; /* Formato de pílula */
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Efeito ao passar o mouse na etiqueta */
+.skill-badge:hover {
+    background: linear-gradient(90deg, #6791fb 0%, #1e25ac 100%);
+    border-color: transparent;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Responsividade Simplificada */
+@media (max-width: 768px) {
+    .skill-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-category {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .skill-content::after, 
+    .skill-content::before {
+        width: 15rem;
+        height: 15rem;
+    }
+}

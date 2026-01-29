@@ -4,6 +4,8 @@
 .sobre-section {
     position: relative;
     padding: 120px 5%;
+    overflow: hidden;
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }
@@ -17,7 +19,9 @@
     height: 40rem;
     border-radius: 50%;
     z-index: -1;
+    /* Desfoque extremo para virar uma "névoa" */
     filter: blur(250px); 
+    /* Opacidade MÍNIMA. Se aumentar, vira uma mancha feia */
     opacity: 0.06; 
 }
 

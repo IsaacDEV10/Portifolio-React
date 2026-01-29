@@ -1,0 +1,176 @@
+/* Skills.css */
+
+.skill-container {
+    margin-top: 100px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding: 0 20px; /* Margem de segurança para mobile */
+    /* Garante que os blobs de fundo não criem barra de rolagem lateral indesejada */
+    overflow: hidden; 
+}
+
+/* Título da Seção com Gradiente */
+h2#skills {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    background: linear-gradient(90deg, #6791fb 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+}
+
+/* Container principal dos cards */
+.skill-content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Garante que todos os cards tenham a mesma altura */
+    gap: 30px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- EFEITOS DE FUNDO (Blobs) --- */
+.skill-content::after,
+.skill-content::before {
+    content: " ";
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(120px);
+    opacity: 0.5; /* Suavizei um pouco para não atrapalhar a leitura */
+}
+
+.skill-content::after {
+    background-color: #6791fb;
+    top: -5rem;
+    left: -5%;
+}
+
+.skill-content::before {
+    background: #1e25ac;
+    bottom: -5rem;
+    right: -5%;
+}
+
+/* --- CARDS DAS CATEGORIAS (Front, Back, Tools) --- */
+.skill-category {
+    flex: 1; /* Divide o espaço igualmente */
+    min-width: 300px; /* Largura mínima antes de quebrar linha */
+    max-width: 380px;
+    
+    /* Efeito de Vidro (Glassmorphism) */
+    background: rgba(20, 20, 20, 0.6); 
+    border: 1px solid rgba(103, 145, 251, 0.2);
+    border-radius: 1rem;
+    padding: 30px 25px;
+    
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+/* Efeito ao passar o mouse no Card */
+.skill-category:hover {
+    transform: translateY(-10px); /* Sobe um pouquinho */
+    border-color: #6791fb;
+    box-shadow: 0 10px 40px -10px rgba(103, 145, 251, 0.3);
+}
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #6791fb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* --- LISTA E BADGES (ETIQUETAS) --- */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as badges dentro do card */
+    gap: 12px; /* Espaço entre as badges */
+}
+
+.skill-badge {
+    /* Alinhamento do Ícone com o Texto */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Estilo da "Pílula" */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    padding: 10px 18px;
+    border-radius: 50px;
+    
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+    user-select: none;
+}
+
+/* Efeito ao passar o mouse na Badge individual */
+.skill-badge:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #6791fb;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(103, 145, 251, 0.2);
+}
+
+/* --- RESPONSIVIDADE (MOBILE E TABLET) --- */
+
+/* Telas menores que 1024px (Tablets) */
+@media (max-width: 1024px) {
+    .skill-content {
+        gap: 20px;
+    }
+    
+    .skill-category {
+        min-width: 45%; /* Mostra 2 cards por linha se der */
+    }
+}
+
+/* Telas menores que 768px (Mobile) */
+@media (max-width: 768px) {
+    .skill-container {
+        margin-top: 60px;
+    }
+
+    .skill-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-category {
+        width: 100%;
+        max-width: 100%; /* Ocupa a largura toda no mobile */
+        margin-bottom: 10px;
+    }
+    
+    /* Ajuste dos blobs para mobile */
+    .skill-content::after, 
+    .skill-content::before {
+        width: 15rem;
+        height: 15rem;
+        filter: blur(80px);
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 380px) {
+    .skill-badge {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+}

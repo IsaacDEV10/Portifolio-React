@@ -1,0 +1,230 @@
+/* Hero.css */
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%; /* Margem lateral responsiva */
+    min-height: 90vh; /* Ocupa quase a tela toda */
+    position: relative;
+    overflow: hidden; /* Impede rolagem horizontal indesejada */
+    margin-top: 50px;
+}
+
+/* --- EFEITOS DE FUNDO (Blobs) --- */
+.hero-container::after,
+.hero-container::before {
+    content: "";
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.hero-container::after {
+    background-color: #1e25ac;
+    top: -5rem;
+    left: -10rem;
+}
+
+.hero-container::before {
+    background-color: #6791fb;
+    bottom: 0;
+    right: -10rem;
+}
+
+/* --- CONTEÚDO DE TEXTO --- */
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    color: #fff;
+    z-index: 2;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    color: #6791fb;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+/* Texto com Gradiente */
+.gradient-text {
+    background: linear-gradient(90deg, #6791fb 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+}
+
+/* --- BOTÕES --- */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #6791fb 0%, #1e25ac 100%);
+    color: white;
+    box-shadow: 0 0 20px rgba(103, 145, 251, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(103, 145, 251, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #6791fb;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: rgba(103, 145, 251, 0.1);
+    transform: translateY(-3px);
+}
+
+/* --- ÁREA DA IMAGEM --- */
+.hero-img-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 500px; /* Define altura para os ícones flutuarem */
+}
+
+/* Caixa da foto principal */
+.img-box {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(103, 145, 251, 0.2) 0%, rgba(0,0,0,0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-photo {
+    width: 90%;
+    height: auto;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+}
+
+/* --- ÍCONES FLUTUANTES --- */
+.floating-icon {
+    position: absolute;
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Posicionamento dos ícones ao redor da foto */
+.react { top: 10%; left: 10%; animation-delay: 0s; }
+.node { top: 20%; right: 10%; animation-delay: 1.5s; }
+.js { bottom: 15%; left: 15%; animation-delay: 3s; }
+.next { bottom: 25%; right: 5%; animation-delay: 4.5s; }
+
+/* Animação de flutuação */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 968px) {
+    .hero-container {
+        flex-direction: column-reverse; /* Foto em cima, texto em baixo no mobile */
+        text-align: center;
+        padding-top: 50px;
+        height: auto;
+    }
+
+    .hero-content {
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        margin: 0 auto 2rem auto; /* Centraliza o texto */
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-img-wrapper {
+        width: 100%;
+        height: 400px;
+    }
+
+    .img-box {
+        width: 280px;
+        height: 280px;
+    }
+
+    /* Ajuste os ícones para ficarem mais próximos no mobile */
+    .react { top: 0; left: 15%; }
+    .node { top: 10%; right: 15%; }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Botões empilhados em telas muito pequenas */
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,195 @@
+.sobre-container {
+    margin-top: 130px;
+    position: relative;
+    color: #fff;
+}
+
+.sobre-container h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.sobre-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+   
+}
+
+.sobre-content::after,
+.sobre-content::before {
+    content: " ";
+    width: 28rem;
+    height: 28rem;
+    border-radius: 28.125rem;
+    background-color: #6791fb;
+    position: absolute;
+    z-index: -1;
+    filter: blur(225px);
+
+}
+
+.sobre-content::after {
+    top: -3rem;
+    left: -5rem;
+}
+
+.sobre-content::before {
+    background: #1e25ac  ;
+    bottom: 0rem;
+    right: 0rem;
+}
+
+.img-sobre img {
+    width: 330px;
+    height: auto;
+    margin-left: 50px;
+    margin-right: 40px;
+   
+}
+
+.text-sobre {
+    color: #fff;
+    font-size: 18px;
+    border:  1.5px solid #6791fb;
+    margin-right: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background: #00000042;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    
+}
+
+.text-sobre:hover {
+    transform: translateY(-0.8rem);
+    transition: .5s;
+}
+
+.text-sobre p {
+    margin-left: 20px;
+}
+
+.text-sobre h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    margin-left: 18px;
+}
+
+.text-sobre span {
+    color:#1e25ac ;
+}
+
+.text-sobre .sobre-icon img {
+    width: 50px;
+    background: linear-gradient(90deg, #6791fb 0%, #1e25ac 100%);
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+@media (max-width: 1025px) {
+    .sobre-container {
+        margin-top: 150px;
+    }
+
+    .text-sobre {
+        font-size: 16px;
+    }
+
+    .text-sobre h1 {
+        font-size: 30px;
+    }
+
+    .img-sobre img {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-container {
+        margin-top: 100px;
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-sobre {
+        font-size: 14px;
+    }
+
+    .text-sobre h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-container {
+        margin-top: 80px;
+    }
+
+    .text-sobre {
+        font-size: 12px;
+    }
+
+    .text-sobre h1 {
+        font-size: 34px;
+    }
+
+    .sobre-content::after,
+    .sobre-content::before {
+        width: 20rem;
+        height: 20rem;
+        filter: blur(150px);
+    }
+
+    .sobre-content::after {
+        top: -2rem;
+        left: -3rem;
+    }
+
+    .sobre-content::before {
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .sobre-container {
+        margin-top: 50px;
+    }
+
+
+    .text-sobre {
+        height: auto ;
+        font-size: 12px;
+        padding: 5px;
+        margin-left: 20px;
+    }
+    
+
+    .text-sobre h1 {
+        font-size: 30px;
+    }
+
+    .sobre-content::after,
+    .sobre-content::before {
+        width: 15rem;
+        height: 15rem;
+        filter: blur(100px);
+    }
+
+    .sobre-content::after {
+        top: -1rem;
+        left: -2rem;
+    }
+
+    .sobre-content::before {
+        bottom: 0;
+        right: 0;
+    }
+}
+

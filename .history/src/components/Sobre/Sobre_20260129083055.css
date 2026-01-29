@@ -4,20 +4,26 @@
 .sobre-section {
     position: relative;
     padding: 120px 5%;
+    overflow: hidden;
+    /* FORÇA BRUTA: Garante que o fundo seja o preto do site */
+    background: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }
 
-
+/* --- BLOBS DE LUZ (EFEITO ATMOSFÉRICO) --- */
+/* Aumentei o blur e diminuí a opacidade para não marcar o fundo */
 .sobre-section::after,
 .sobre-section::before {
     content: "";
     position: absolute;
-    width: 40rem; 
+    width: 40rem; /* Muito grande para espalhar bem */
     height: 40rem;
     border-radius: 50%;
     z-index: -1;
+    /* Desfoque extremo para virar uma "névoa" */
     filter: blur(250px); 
+    /* Opacidade MÍNIMA. Se aumentar, vira uma mancha feia */
     opacity: 0.06; 
 }
 

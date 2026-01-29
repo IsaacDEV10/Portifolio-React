@@ -5,13 +5,15 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    margin-top: 80px;
+    margin-top: 80px; /* Espaço para não colar no topo */
     margin-bottom: 50px;
     position: relative;
+    /* Fundo transparente para manter a cor original da sua página */
     background: transparent; 
 }
 
 /* --- EFEITOS DE BRILHO (BLOBS) --- */
+/* Eles ficam com z-index -1 para ficarem ATRÁS de tudo */
 .hero-container::after,
 .hero-container::before {
     content: "";
@@ -19,19 +21,19 @@
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
-    filter: blur(100px);
+    filter: blur(100px); /* O desfoque que cria o brilho */
     z-index: -1; 
     opacity: 0.5;
 }
 
 .hero-container::after {
-    background-color: #1e25ac;
+    background-color: #1e25ac; /* Cor azul escuro original */
     top: -2rem;
     left: -5rem;
 }
 
 .hero-container::before {
-    background-color: #6791fb;
+    background-color: #6791fb; /* Cor azul claro original */
     bottom: 0;
     right: -5rem;
 }
@@ -40,7 +42,7 @@
 .hero-content {
     flex: 1;
     max-width: 600px;
-    color: #fff;
+    color: #fff; /* Garante que o texto seja branco */
     z-index: 10;
 }
 
@@ -59,6 +61,7 @@
     font-weight: 700;
 }
 
+/* Texto com gradiente */
 .gradient-text {
     background: linear-gradient(90deg, #6791fb 0%, #fff 100%);
     -webkit-background-clip: text;
@@ -67,7 +70,7 @@
 
 .hero-content p {
     font-size: 1rem;
-    color: #d1d5db;
+    color: #d1d5db; /* Cinza claro para leitura confortável */
     line-height: 1.6;
     margin-bottom: 2rem;
     max-width: 90%;
@@ -119,22 +122,24 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 450px; /* Aumentei um pouco para caber os icones */
+    height: 400px; /* Área segura para animação */
 }
 
+/* Circulo da Foto */
 .img-box {
-    width: 300px;
+    width: 300px; /* Tamanho fixo para não quebrar */
     height: 300px;
     position: relative;
     z-index: 1;
     border-radius: 50%;
+    /* Gradiente sutil atrás da foto */
     background: radial-gradient(circle, rgba(103,145,251,0.2) 0%, rgba(0,0,0,0) 70%);
 }
 
 .main-photo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Garante que a foto preencha o círculo */
     border-radius: 50%;
     border: 2px solid rgba(103, 145, 251, 0.5);
 }
@@ -142,28 +147,20 @@
 /* --- ÍCONES FLUTUANTES --- */
 .floating-icon {
     position: absolute;
-    background: rgba(30, 30, 30, 0.8);
+    background: rgba(30, 30, 30, 0.8); /* Fundo escuro semi-transparente */
     padding: 12px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     z-index: 5;
-    animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite; /* Animação definida abaixo */
 }
 
-/* POSICIONAMENTO DOS 6 ÍCONES (Relógio) */
-/* Topo */
-.icon-react { top: 5%; left: 15%; animation-delay: 0s; }
-.icon-node  { top: 5%; right: 15%; animation-delay: 1s; }
-
-/* Meio */
-.icon-js    { top: 45%; left: 0%; animation-delay: 2s; }
-.icon-next  { top: 45%; right: 0%; animation-delay: 3s; }
-
-/* Baixo */
-.icon-docker   { bottom: 10%; left: 15%; animation-delay: 4s; }
-.icon-tailwind { bottom: 10%; right: 15%; animation-delay: 5s; }
-
+/* Posições dos ícones */
+.icon-react { top: 10%; left: 10%; animation-delay: 0s; }
+.icon-node { top: 20%; right: 10%; animation-delay: 1.5s; }
+.icon-js { bottom: 10%; left: 20%; animation-delay: 3s; }
+.icon-next { bottom: 20%; right: 5%; animation-delay: 4.5s; }
 
 /* Animação de Flutuação */
 @keyframes float {
@@ -175,7 +172,7 @@
 /* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 900px) {
     .hero-container {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /* Foto em cima, texto em baixo */
         text-align: center;
         margin-top: 40px;
     }
@@ -195,6 +192,7 @@
         justify-content: center;
     }
 
+    /* Reduzir imagem e bolhas no mobile */
     .hero-container::after, .hero-container::before {
         width: 15rem;
         height: 15rem;
@@ -205,11 +203,7 @@
         height: 250px;
     }
 
-    /* No mobile, aproximamos os ícones da foto */
-    .icon-react { top: 0; left: 5%; }
-    .icon-node  { top: 0; right: 5%; }
-    .icon-js    { top: 40%; left: -5%; }
-    .icon-next  { top: 40%; right: -5%; }
-    .icon-docker   { bottom: 0; left: 5%; }
-    .icon-tailwind { bottom: 0; right: 5%; }
+    /* Ajustar ícones no mobile para ficarem mais perto da foto */
+    .icon-react { top: 0; left: 0; }
+    .icon-node { top: 0; right: 0; }
 }
